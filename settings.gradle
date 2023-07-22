@@ -17,7 +17,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Display a map"
+rootProject.name = "Display a web map"
 include ':app'
 
 

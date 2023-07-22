@@ -25,9 +25,9 @@ import androidx.databinding.DataBindingUtil
 import com.arcgismaps.ApiKey
 import com.arcgismaps.ArcGISEnvironment
 import com.arcgismaps.mapping.ArcGISMap
-import com.arcgismaps.mapping.BasemapStyle
-import com.arcgismaps.mapping.Viewpoint
 import com.arcgismaps.mapping.view.MapView
+import com.arcgismaps.portal.Portal
+import com.arcgismaps.mapping.PortalItem
 import com.example.app.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -53,13 +53,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupMap() {
+        val portal = Portal("https:///www.arcgis.com", Portal.Connection.Anonymous)
 
-        val map = ArcGISMap(BasemapStyle.ArcGISTopographic)
+        val itemId = "41281c51f9de45edaf1c8ed44bb10e30"
+        val portalItem = PortalItem(portal, itemId)
+        val map = ArcGISMap(portalItem)
 
-        // set the map to be displayed in the layout's MapView
         mapView.map = map
-
-        mapView.setViewpoint(Viewpoint(34.0270, -118.8050, 72000.0))
 
     }
 
