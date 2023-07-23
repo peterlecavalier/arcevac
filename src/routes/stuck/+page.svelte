@@ -2,9 +2,9 @@
   <body class="page">
     <div class="content">
       <img src="src/assets/alert.svg" alt="" class="img"/>
-      <header class="g-heading">Your location has been sent to first responders</header>
+      <header class="g-heading">Your location has been sent to the administrator</header>
       <a href="/map">
-        <button id="a" class="btn"> 911 </button>
+        <button id="a" class="btn"> OK </button>
       </a>
     </div>
   </body>
