@@ -2,9 +2,9 @@
   <body class="page">
     <div class="content">
       <img src="src/assets/alert.svg" alt="" class="img"/>
-      <header class="g-heading">FIRE in your building</header>
+      <header class="g-heading">Your location has been sent to first responders</header>
       <a href="/map">
-        <button id="a" class="btn"> EVACUATE NOW </button>
+        <button id="a" class="btn"> 911 </button>
       </a>
     </div>
   </body>
@@ -39,7 +39,7 @@
       padding: 1rem;
 
       font-weight: 800;
-      font-size: 45px;
+      font-size: 35px;
       color: white;
     }
 
@@ -63,7 +63,7 @@
       box-shadow: none;
 
       height: 4rem;
-      width: 16rem;
+      width: 9rem;
       margin-top: 8rem;
     }
 
