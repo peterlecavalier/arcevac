@@ -1,5 +1,6 @@
 <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 <script>
+  import Map from "@arcgis/core/Map";
   import MapView from "@arcgis/core/views/MapView";
   import esriConfig from "@arcgis/core/config";
   import ScaleBar from "@arcgis/core/widgets/Scalebar";
@@ -11,57 +12,83 @@
 
   const baseUrl = "https://services8.arcgis.com/LLNIdHmmdjO2qQ5q/arcgis/rest/services/Denver_First_Floor_1110/FeatureServer";
 
+  const map = new Map({
+    basemap: "streets-night-vector"
+  });
+
   const createMap = (domNode) => {
     const view = new MapView({
       container: domNode,
-      map: {
-        basemap: "streets-night-vector",
-      },
+      map: map,
       zoom: 19,
       center: [-105.12133, 39.97018]
       // zoomed center: [-105.12132251901546, 39.97027048328751]
     });
-
-    const evacueeLayer = new FeatureLayer({
-      url: baseUrl + "/0"
-    });
-    const exitsLayer = new FeatureLayer({
-      url: baseUrl + "/1"
-    });
-    const initialRouteLayer = new FeatureLayer({
-      url: baseUrl + "/3"
-    });
-    const initialRoutePlusLayer = new FeatureLayer({
-      url: baseUrl + "/5"
-    });
-    const editedRouteLayer = new FeatureLayer({
-      url: baseUrl + "/2"
-    });
-    const editedRoutePlusLayer = new FeatureLayer({
-      url: baseUrl + "/4"
-    });
-    const pathwaysLayer = new FeatureLayer({
-      url: baseUrl + "/6"
-    });
-    const hallwayBlockedLayer = new FeatureLayer({
-      url: baseUrl + "/7"
-    });
-    const geofenceLayer = new FeatureLayer({
-      url: baseUrl + "/8"
-    });
-    const roomsLayer = new FeatureLayer({
-      url: baseUrl + "/9"
-    });
-
-    view.map.add(geofenceLayer, 0);
-    view.map.add(pathwaysLayer, 0);
-    view.map.add(exitsLayer);
-    view.map.add(evacueeLayer);
-    view.map.add(initialRouteLayer);
-    view.map.add(initialRoutePlusLayer);
   };
 
-  
+  const evacueeLayer = new FeatureLayer({
+    url: baseUrl + "/0"
+  });
+  const exitsLayer = new FeatureLayer({
+    url: baseUrl + "/1"
+  });
+  const initialRouteLayer = new FeatureLayer({
+    url: baseUrl + "/3"
+  });
+  const initialRoutePlusLayer = new FeatureLayer({
+    url: baseUrl + "/5"
+  });
+  const editedRouteLayer = new FeatureLayer({
+    url: baseUrl + "/2"
+  });
+  const editedRoutePlusLayer = new FeatureLayer({
+    url: baseUrl + "/4"
+  });
+  const pathwaysLayer = new FeatureLayer({
+    url: baseUrl + "/6"
+  });
+  const hallwayBlockedLayer = new FeatureLayer({
+    url: baseUrl + "/7"
+  });
+  const geofenceLayer = new FeatureLayer({
+    url: baseUrl + "/8"
+  });
+  const roomsLayer = new FeatureLayer({
+    url: baseUrl + "/9"
+  });
+
+  map.add(geofenceLayer, 0);
+  map.add(pathwaysLayer, 0);
+  map.add(exitsLayer);
+  map.add(evacueeLayer);
+  map.add(initialRouteLayer);
+  map.add(initialRoutePlusLayer);
+
+  let buttonCounter = 0;
+  function buttonClick (){
+    if (buttonCounter == 0){
+      map.add(hallwayBlockedLayer);
+      buttonCounter++;
+    }
+    else if (buttonCounter == 1){
+      map.remove(initialRouteLayer);
+      map.remove(initialRoutePlusLayer);
+      map.remove(hallwayBlockedLayer);
+      map.add(editedRouteLayer);
+      map.add(editedRoutePlusLayer);
+      buttonCounter++;
+    }
+    else if (buttonCounter == 2){
+      map.remove(editedRouteLayer);
+      map.remove(editedRoutePlusLayer);
+      map.add(initialRouteLayer);
+      map.add(initialRoutePlusLayer);
+      buttonCounter = 0;
+    }
+
+  }
+
+
 </script>
 
 <main>
@@ -74,7 +101,7 @@
     <button class="btn-stuck"> I am stuck</button>
   </a>
 
-  <button class="next"  onclick={  }> 
+  <button class="next"  on:click={() => buttonClick()}> 
     <img src="src/assets/next.svg" alt="">
   </button>
 
