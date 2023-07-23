@@ -1,22 +1,10 @@
 <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
   <body class="page">
-    <!-- <div class="content">
-      <img src="src/assets/logo.svg" alt="" class="img"/>
-      <header class="g-heading">ArcEvac</header>
-        <button id="a" class="btn"> Register Institution </button>
-    </div> -->
     <img src="src/assets/end-page.svg" alt=""> 
   </body>
 
   
   <style lang="scss">
-    .content {
-      display: flex;
-      flex-wrap: wrap;
-      align-content: center;
-      justify-content: center;
-    }
-
     .page {
       position: absolute;
       width: 100vw;
