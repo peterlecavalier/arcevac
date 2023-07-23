@@ -1,0 +1,56 @@
+:root {
+    /* Palette */
+
+    --palette-dark-blue: #3c4770;
+    --palette-grey-blue: #aab1c3;
+    --palette-medium-pink: #be8199;
+    --palette-light-grey: #aab1c3;
+    --palette-light-pink: #dfcfd5;
+
+  
+    /* Typography */
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    font-family: "Poppins", sans-serif;
+  
+    /* Layouts */
+    --default-spacing: 1rem;
+    --smaller-spacing: calc(var(--default-spacing) / 2);
+  }
+  
+  /* reset */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border-style: none;
+  
+    font-family: "Jura", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+  }
+  
+  /* global typography styles */
+  .g-heading {
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+  
+  .g-label {
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  .g-emphasis {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .g-contextual {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 300;
+  }
