@@ -10,6 +10,7 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch"
 	},
 	"devDependencies": {
+		"@arcgis/core": "^4.27.6",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.5.0",
 		"svelte": "^3.54.0",

@@ -3,23 +3,47 @@
 
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Jura" />
   <body class="page">
-    <div class="content">
-      <img src="src/assets/alert.svg" alt="" class="img"/>
-      <header class="g-heading">FIRE in your building</header>
-
-      <a href="/map">
-        <button id="a" class="btn"> EVACUATE NOW </button>
-      </a>
+    <div class="placeholder">
+      Map goes here
     </div>
+    <!-- <div class="router"> 
+      <img src="src/assets/right-arrow.svg" alt=""/> 
+      Turn right
+    </div> -->
+
+    <button class="btn">
+      I need help
+    </button>
+
+    <button class="btn">
+      I evacuated
+    </button>
   </body>
 
   
   <style lang="scss">
-    .content {
+
+    .placeholder {
+      background-color: rgb(196, 196, 196);
+      height: 90%;
+
       display: flex;
       flex-wrap: wrap;
       align-content: center;
       justify-content: center;
+    }
+
+    .router {
+      background-color: white;
+      height: 30%;
+
+      font-size: 30px;
+      font-weight: 700;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-align: center;
     }
 
     .page {
@@ -42,8 +66,8 @@
       text-align: center;
       padding: 1rem;
 
-      font-weight: 800;
-      font-size: 45px;
+      font-weight: 100;
+      font-size: 30px;
       color: white;
     }
 
@@ -57,14 +81,12 @@
     background-color: black;
     color: white;
     font-family: "Jura";
-    font-size: 22px;
-    font-weight: 800;
+    font-size: 20px;
     border-radius: 30px;
     border: none;
     box-shadow: none;
     height: 3rem;
-    width: 14rem;
-    margin: auto;
+    width: 12rem;
   }
 
   </style>
