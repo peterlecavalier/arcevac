@@ -1,16 +1,18 @@
 <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
   <body class="page">
     <div class="content">
-      <img src="src/assets/alert.svg" alt="" class="img"/>
-      <header class="g-heading">FIRE in your building</header>
-      <a href="/map">
-        <button id="a" class="btn"> EVACUATE NOW </button>
+      <img src="src/assets/safe.svg" alt="" class="img"/>
+      <header class="g-heading">Evacuated safely!</header>
+
+      <a href="/landing">
+        <button id="a" class="btn"> Close </button>
       </a>
     </div>
   </body>
 
   
   <style lang="scss">
+
     .content {
       display: flex;
       flex-wrap: wrap;
@@ -28,7 +30,7 @@
       background-size: cover;
       background-repeat: no-repeat;
       
-      background-image: linear-gradient(180deg, #010025, #FF2B2B) ;
+      background-image: linear-gradient(180deg, #010025, #2B99FF) ;
       font-family: 'Montserrat';
     }
 
@@ -66,5 +68,4 @@
       width: 16rem;
       margin-top: 8rem;
     }
-
   </style>

@@ -1,12 +1,11 @@
 <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
   <body class="page">
-    <div class="content">
-      <img src="src/assets/alert.svg" alt="" class="img"/>
-      <header class="g-heading">FIRE in your building</header>
-      <a href="/map">
-        <button id="a" class="btn"> EVACUATE NOW </button>
-      </a>
-    </div>
+    <!-- <div class="content">
+      <img src="src/assets/logo.svg" alt="" class="img"/>
+      <header class="g-heading">ArcEvac</header>
+        <button id="a" class="btn"> Register Institution </button>
+    </div> -->
+    <img src="src/assets/end-page.svg" alt=""> 
   </body>
 
   
@@ -28,7 +27,7 @@
       background-size: cover;
       background-repeat: no-repeat;
       
-      background-image: linear-gradient(180deg, #010025, #FF2B2B) ;
+      background-image: linear-gradient(180deg, #010025, #2B99FF) ;
       font-family: 'Montserrat';
     }
 
