@@ -74,9 +74,13 @@
     <button class="btn-stuck"> I am stuck</button>
   </a>
 
-  <input id="next" type="button" value=">" onclick="">
+  <button class="next"  onclick={  }> 
+    <img src="src/assets/next.svg" alt="">
+  </button>
+
+  <!-- <input id="next" type="button" value=">" onclick="">
     <button class="btn-next"> </button>
-  </a>
+  </a> -->
   
   
 </main>
@@ -128,5 +132,18 @@
     height: 8rem;
     width: 32rem;
     margin: auto;
+  }
+
+  .next {
+    position: fixed;
+    bottom: 800px;
+    left: 650px;
+    height: 10rem;
+
+    border: none;
+    padding: none;
+    background: none;
+    margin: 0;
+    padding: 0;
   }
 </style>
